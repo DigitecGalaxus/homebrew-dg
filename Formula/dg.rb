@@ -12,22 +12,12 @@ class Dg < Formula
   sha256 "83745cb9613d2a856de66650cf153caf1d83d6569ac98d9242dc297dc4ebeff2"
 
   def install
-    # Mount the disk image
-    dmg = File.basename(url)
-    system "hdiutil", "attach", dmg
-
-    # Get the mounted disk image path
-    mnt = Dir.glob("/Volumes/*").max_by { |d| File.mtime(d) }
-
-    # Install the app
-    prefix.install "#{mnt}/dg.app"
-
-    # Unmount the disk image
-    system "hdiutil", "detach", mnt
+    system "hdiutil", "attach", "-nobrowse", "-quiet", "-mountpoint", "#{prefix}/dg", "#{url}"
+    system "cp", "-r", "#{prefix}/dg/dg.app", "/Applications/"
+    system "hdiutil", "detach", "#{prefix}/dg"
 
     # Create a symlink to the binary
-    bin.mkpath
-    bin.install_symlink prefix/"dg.app/Contents/MacOS/dg" => "dg"
+    bin.install_symlink "/Applications/dg.app/Contents/MacOS/dg" => "dg"
   end
 
   def caveats
@@ -37,7 +27,7 @@ class Dg < Formula
   end
 
   test do
-    system "#{bin}/dg", "--version"
+    system "dg", "--version"
   end
 
 end
