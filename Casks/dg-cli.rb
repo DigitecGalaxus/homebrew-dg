@@ -1,6 +1,6 @@
 cask 'dg-cli' do
   version '1.13.18'
-  sha256 "83745cb9613d2a856de66650cf153caf1d83d6569ac98d9242dc297dc4ebeff2"
+  sha256 "46fe71091ba2c0dc4b37f2f123232ca48459765483a240797a1249f296b5c156"
 
   url "https://dg-package-repositories.platform.prod.int.devinite.com/DGCLI/mac/dg-cli-1.13.18.dmg"
   name 'Dg'
