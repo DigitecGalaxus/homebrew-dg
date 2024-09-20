@@ -14,7 +14,7 @@ class DgCli < Formula
   end
 
   def post_install
-    system "sudo", "xattr", "-rd", "com.apple.quarantine", "#{libexec}"
+    system "xattr", "-rd", "com.apple.quarantine", "#{libexec}"
   end
 
   test do
