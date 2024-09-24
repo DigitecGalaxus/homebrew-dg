@@ -1,9 +1,9 @@
 class DgCli < Formula
   desc "Digitec Galaxus CLI"
   homepage "https://www.galaxus.ch"
-  version "1.13.39"
-  url "https://dg-package-repositories.platform.prod.int.devinite.com/DGCLI/mac/dg-cli-1.13.39.tar.gz", :using => :curl
-  sha256 "7ba23f2fe4ec731a7ef5985c603cfa1efa2cdbfda8b963211dffcca35fea3d08"
+  version "1.13.40"
+  url "https://dg-package-repositories.platform.prod.int.devinite.com/DGCLI/mac/dg-cli-1.13.40.tar.gz", :using => :curl
+  sha256 "f8ddf81eb8deeef394bcac0ee5779b29e184506628431129beae0f125caff781"
 
   def install
     libexec.install Dir["*"]
@@ -20,6 +20,6 @@ class DgCli < Formula
 
   test do
     version_text = shell_output("#{bin}/dg --version")
-    assert_equal version_text, "dg 1.13.39"
+    assert_equal version_text, "dg 1.13.40"
   end
 end
