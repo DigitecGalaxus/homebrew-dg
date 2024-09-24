@@ -3,7 +3,7 @@ class DgCli < Formula
   homepage "https://www.galaxus.ch"
   version "1.13.35"
   url "https://dg-package-repositories.platform.prod.int.devinite.com/DGCLI/mac/dg-cli-1.13.35", :using => :curl
-  sha256 "fde403b3e0944c6fed8fe0b3422382906534c380"
+  sha256 "4d5611f107f509cb1a3ebf146d27bd121de38618"
 
   def install
     libexec.install Dir["*"]
