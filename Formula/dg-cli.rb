@@ -5,6 +5,8 @@ class DgCli < Formula
   url "https://dg-package-repositories.platform.prod.int.devinite.com/DGCLI/mac/dg-cli-2.2.7.tar.gz", :using => :curl
   sha256 "23c496904e34528d57132edb2995510da81647a24d8712a87237b61ab9f97636"
 
+  depends_on "openssl@3"
+
   def install
     libexec.install Dir["*"]
 
