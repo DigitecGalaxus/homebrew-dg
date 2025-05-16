@@ -1,4 +1,4 @@
-class DgCli < Formula
+class DgCliATPreview < Formula
   desc "Digitec Galaxus CLI"
   homepage "https://www.galaxus.ch"
   version "2.5.1"
@@ -6,7 +6,8 @@ class DgCli < Formula
   sha256 "335c63a2d5b1ed8d132bb9b543177e20ddfea550089823633c0fe1137f3791d8"
 
   depends_on "openssl@3"
-  conflicts_with "dg-cli", because: "cannot be installed at the same time as the stable `dg-cli`"
+
+  keg_only :versioned_formula
 
   def install
     libexec.install Dir["*"]
