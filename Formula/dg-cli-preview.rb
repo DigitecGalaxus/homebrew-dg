@@ -7,8 +7,8 @@ class DgCliPreview < Formula
 
   depends_on "openssl@3"
 
-  keg_only :versioned_formula
-
+  conflicts_with "dg-cli", because: "cannot be installed at the same time as `dg-cli`"
+  
   def install
     libexec.install Dir["*"]
 
