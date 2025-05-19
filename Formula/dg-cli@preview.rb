@@ -1,4 +1,4 @@
-class DgCliATPreview < Formula
+class DgCli@preview < Formula
   desc "Digitec Galaxus CLI"
   homepage "https://www.galaxus.ch"
   version "2.5.1"
