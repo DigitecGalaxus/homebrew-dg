@@ -6,6 +6,7 @@ class DgCli < Formula
   sha256 "86cdef438e848d683d76cf768a14ecd2635663bcb8e878c07d1e62947af0faf6"
 
   depends_on "openssl@3"
+  conflicts_with "dg-cli-preview", because: "cannot be installed at the same time as `dg-cli-preview`"
 
   def install
     libexec.install Dir["*"]
