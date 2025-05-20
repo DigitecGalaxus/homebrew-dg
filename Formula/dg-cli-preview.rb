@@ -14,7 +14,7 @@ class DgCliPreview < Formula
 
     (bin/"dg").write <<~EOS
       #!/usr/bin/env bash
-      CLI_INSTALLER=HOMEBREW #{libexec}/dg "$@"
+      CLI_INSTALLER=HOMEBREW CLI_CHANNEL=preview #{libexec}/dg "$@"
     EOS
   end
 
