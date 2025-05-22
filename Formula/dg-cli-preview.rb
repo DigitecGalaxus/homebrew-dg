@@ -3,7 +3,7 @@ class DgCliPreview < Formula
   homepage "https://www.galaxus.ch"
   version "2.5.4-b.1"
   url "https://dg-package-repositories.platform.prod.int.devinite.com/DGCLI/mac/dg-cli-2.5.4-b.1.tar.gz", :using => :curl
-  sha256 "69a94c4157e75572ede6e15537cfc0c19fa9f694d8dd28389dd91f6aab19eed3"
+  sha256 "1f341345f72e7794ec54e5faeecc55768644b7a16be57a5192f76d3f2f19d03b"
 
   depends_on "openssl@3"
 
