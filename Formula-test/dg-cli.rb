@@ -4,7 +4,7 @@ class DgCli < Formula
 
   version "4.2.0"
   url "https://dg-package-repositories.platform.prod.int.devinite.com/DGCLI/mac/dg-cli-4.2.0.tar.gz", :using => :curl
-  sha256 ""
+  sha256 "0ad044983a1403e9b71b9554afe1000c842b0ae31cf747b17a297596328c2466"
 
   depends_on "openssl@3"
   conflicts_with "dg-cli-preview", because: "cannot be installed at the same time as `dg-cli-preview`"
