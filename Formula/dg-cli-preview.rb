@@ -14,7 +14,7 @@ class DgCliPreview < Formula
 
     shell = `dscl . -read ~/ UserShell | sed 's/UserShell: //'`
     sb = "#!"
-    sb << shell.strip!
+    sb << shell.strip
     sb << "\n"
     sb << "CLI_INSTALLER=HOMEBREW CLI_CHANNEL=preview #{libexec}/dg \"$@\""
     sb << "\n"
