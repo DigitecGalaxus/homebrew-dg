@@ -12,9 +12,11 @@ class DgCliPreview < Formula
   def install
     libexec.install Dir["*"]
 
-    shell = `dscl . -read ~/ UserShell | sed 's/UserShell: //'`
-    sb = "#!"
-    sb << shell.strip
+    shebang_path = "#!/usr/bin/env"
+    shell_path = `dscl . -read ~/ UserShell | sed 's/UserShell: //'`
+    shell_name = shell_path.strip().split("/").last()
+    shebang = "#{shebang_path} #{!shell_name.empty? ? shell_name : "bash"}"
+    sb = shebang
     sb << "\n"
     sb << "CLI_INSTALLER=HOMEBREW CLI_CHANNEL=preview #{libexec}/dg \"$@\""
     sb << "\n"
