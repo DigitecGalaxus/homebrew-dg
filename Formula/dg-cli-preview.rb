@@ -13,7 +13,7 @@ class DgCliPreview < Formula
     libexec.install Dir["*"]
 
     shebang_path = "#!/usr/bin/env"
-    shell_path = `dscl . -read ~/ UserShell | sed 's/UserShell: //'`
+    shell_path = `echo $SHELL`
     shell_name = shell_path.strip().split("/").last()
     shebang = "#{shebang_path} #{!shell_name.empty? ? shell_name : "bash"}"
     sb = shebang
