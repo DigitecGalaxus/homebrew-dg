@@ -12,10 +12,14 @@ class DgCliPreview < Formula
   def install
     libexec.install Dir["*"]
 
-    (bin/"dg").write <<~EOS
-      #!/usr/bin/env bash
-      CLI_INSTALLER=HOMEBREW CLI_CHANNEL=preview #{libexec}/dg "$@"
-    EOS
+    shell = `dscl . -read ~/ UserShell | sed 's/UserShell: //'`
+    sb = "#!"
+    sb << shell.strip!
+    sb << "\n"
+    sb << "CLI_INSTALLER=HOMEBREW CLI_CHANNEL=preview #{libexec}/dg \"$@\""
+    sb << "\n"
+
+    (bin/"dg").write sb
   end
 
   def post_install
