@@ -12,16 +12,10 @@ class DgCliPreview < Formula
   def install
     libexec.install Dir["*"]
 
-    shebang_path = "#!/usr/bin/env"
-    shell_path = `echo $SHELL`
-    shell_name = shell_path.strip().split("/").last()
-    shebang = "#{shebang_path} #{!shell_name.empty? ? shell_name : "bash"}"
-    sb = shebang
-    sb << "\n"
-    sb << "CLI_INSTALLER=HOMEBREW CLI_CHANNEL=preview #{libexec}/dg \"$@\""
-    sb << "\n"
-
-    (bin/"dg").write sb
+    (bin/"dg").write <<~EOS
+      #!/usr/bin/env bash
+      CLI_INSTALLER=HOMEBREW CLI_CHANNEL=preview #{libexec}/dg "$@"
+    EOS
   end
 
   def post_install
