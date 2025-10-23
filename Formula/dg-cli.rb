@@ -2,9 +2,9 @@ class DgCli < Formula
   desc "Digitec Galaxus CLI"
   homepage "https://www.galaxus.ch"
 
-  version "2.8.3"
-  url "https://dg-package-repositories.platform.prod.int.devinite.com/DGCLI/mac/dg-cli-2.8.3.tar.gz", :using => :curl
-  sha256 "bfd4c2c34cf1ff0924f64a597bb4d6e48d817dfa49b0ec4ed29c9ab6bfa5203d"
+  version "2.8.4"
+  url "https://dg-package-repositories.platform.prod.int.devinite.com/DGCLI/mac/dg-cli-2.8.4.tar.gz", :using => :curl
+  sha256 "abf300452807f125bed7d15b5ddc147ddd1a2c5134d6a28a616ceebf85748067"
 
   depends_on "openssl@3"
   conflicts_with "dg-cli-preview", because: "cannot be installed at the same time as `dg-cli-preview`"
