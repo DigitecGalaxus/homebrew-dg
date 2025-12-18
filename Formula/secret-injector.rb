@@ -2,16 +2,16 @@ class SecretInjector < Formula
   desc "Inject Azure Key Vault secrets into configuration files"
   homepage "https://github.com/DigitecGalaxus/Dg.ContainerDevelopment"
 
-  version "0.0.2"
+  version "1.0.0"
 
   on_intel do
-    url "https://dg-package-repositories.platform.prod.int.devinite.com/dg-secret-injector/mac/dg-secret-injector_0.0.2_darwin_amd64.tar.gz", using: :curl
-    sha256 "4d2347a7cf2d8d4000b0863c63213caea747541adbba819512fb0e9f6d873312"
+    url "https://dg-package-repositories.platform.prod.int.devinite.com/dg-secret-injector/mac/dg-secret-injector_1.0.0_darwin_amd64.tar.gz", using: :curl
+    sha256 "52b510ba4fee8ebd0d6d024efb0e30c7133c1397d1e30c7f8584b215b43c2c9f"
   end
 
   on_arm do
-    url "https://dg-package-repositories.platform.prod.int.devinite.com/dg-secret-injector/mac/dg-secret-injector_0.0.2_darwin_arm64.tar.gz", using: :curl
-    sha256 "86223a795ae057721da9636c11ac219e88e58acccf2d325876dd93fa8b47f64f"
+    url "https://dg-package-repositories.platform.prod.int.devinite.com/dg-secret-injector/mac/dg-secret-injector_1.0.0_darwin_arm64.tar.gz", using: :curl
+    sha256 "128c6083c530c8baba30e0ca53615b6e55b66ec0055c4004c238b99e099a8776"
   end
 
   conflicts_with "secret-injector-preview", because: "cannot be installed at the same time as `secret-injector-preview`"
