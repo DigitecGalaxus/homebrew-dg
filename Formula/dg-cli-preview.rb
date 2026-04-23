@@ -1,9 +1,9 @@
 class DgCliPreview < Formula
   desc "Digitec Galaxus CLI"
   homepage "https://www.galaxus.ch"
-  version "2.16.1-b.1"
-  url "https://dg-package-repositories.platform.prod.int.devinite.com/DGCLI/mac/dg-cli-2.16.1-b.1.tar.gz", :using => :curl
-  sha256 "03f27786d88f021a7420aadc0b5029ba4a3f9ad2a4833565f09e4c37bdd674f0"
+  version "2.16.0-b.2"
+  url "https://dg-package-repositories.platform.prod.int.devinite.com/DGCLI/mac/dg-cli-2.16.0-b.2.tar.gz", :using => :curl
+  sha256 "718362fbe522179e835fc527e3aeca87fa7c2caee4f006863f045386b0212afc"
 
   depends_on "openssl@3"
 
